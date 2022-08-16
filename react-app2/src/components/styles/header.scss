@@ -1,0 +1,23 @@
+body {
+    width: 1920px;
+    margin: 0 auto;
+
+    header {
+        
+
+        margin: 0 auto;
+
+
+        
+    }
+
+    .container {
+        margin: 0 auto;
+
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+}

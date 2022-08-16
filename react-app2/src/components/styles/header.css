@@ -1,0 +1,15 @@
+body {
+  width: 1920px;
+  margin: 0 auto;
+}
+body header {
+  margin: 0 auto;
+}
+body .container {
+  margin: 0 auto;
+}
+body .container .nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}/*# sourceMappingURL=header.css.map */
