@@ -29,7 +29,7 @@ body {
 
 .nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
 
@@ -83,33 +83,6 @@ body {
 
 
 
+@import url(../home/home.scss);
+@import url(../popup/popup.scss);
 
-.main {}
-
-
-.info {
-
-
-}
-
-.info__text {
-    display: flex;
-}
-
-.info__text-title{}
-
-.info__text-btn {
-
-}
-
-.info__text-socials {
-
-}
-
-.info__img {
-
-}
-
-.info__img-p {
-
-}
