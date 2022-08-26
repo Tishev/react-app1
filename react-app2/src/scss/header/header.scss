@@ -11,10 +11,9 @@ body {
     margin: 0 auto;
 
     header {
-        
-
+        padding-top: 30px;
         margin: 0 auto;
-        min-width: 1760px;
+        width: 1760px;
         height: 100px;
 
         
@@ -22,7 +21,7 @@ body {
 
     .container {
         margin: 0 auto;
-
+        
         
     }
 }
@@ -37,6 +36,7 @@ body {
 .nav__navigation {
     .nav__navigation-ul {
         display: flex;
+        align-items: center;
         font-family: 'Futura New';
             font-style: normal;
             font-weight: 700;
@@ -47,6 +47,7 @@ body {
         .nav__navigation-li {
             margin-left: 80px;
             cursor: pointer;
+            transition: .6s;
 
         }
                 .nav__navigation-li:hover{
@@ -58,6 +59,35 @@ body {
             margin-left: 0;
         }
     }
+}
+.nav__navigation-p {
+    font-size: 28px;
+    cursor: pointer;
+    transition: .6s;
+}
+.nav__navigation-p:hover {
+    transition: .6s;
+        color: #87807d;
+}
+.nav__navigation-person {
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.nav__navigation-btn {
+    padding: 10px 25px;
+    transition: .6s;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #FFC59E;
+    color: white;
+    font-size: 20px;
+}
+.nav__navigation-btn:hover{
+    transition: .6s;
+    background-color: #d7976c;
 }
 
 .nav__location {
@@ -83,6 +113,4 @@ body {
 
 
 
-@import url(../home/home.scss);
-@import url(../popup/popup.scss);
 

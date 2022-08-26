@@ -5,3 +5,14 @@
     list-style-type: none;
     text-decoration: none;
 }
+.container {
+        margin: 0 auto;
+    }
+.container-categories {
+    margin: 0 auto;
+    max-width: 1355px
+}
+
+@import url(../scss/home/home.scss);
+@import url(../scss/popup/popup.scss);
+@import url(../scss/header/header.scss);

@@ -1,19 +1,43 @@
 {
-  "posts": [
+  "users": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "email": "sadds@mail.ru",
+      "password": "$2a$10$ujT4MghdHDF3xO8fgoO55.c9Ph4Ou1U8MR6XeD5JmSa51ZQztgbhm",
+      "name": "asdsadasd",
+      "id": 1
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "email": "tishev5667@bk.ru",
+      "password": "$2a$10$nxLE51s7SkQHLljObHUeWeh5.191geGYojJoHyWQ1mNxrs/XcvUxC",
+      "name": "Alex",
+      "id": 2
+    },
+    {
+      "email": "sadasdsds@bk.ru",
+      "password": "$2a$10$HQH.qe9OT2nfj9Z/1RO2luppY0qXOwF6ip6TDGKPwzvTgFaOwFvO2",
+      "name": "alex",
+      "id": 3
+    },
+    {
+      "email": "fsdsfdss@bk.ru",
+      "password": "$2a$10$zfu5ZttV/PaKVu8jxYnphOp0L3wqeT2tmC59FzTJMBnkWsZwNQJHi",
+      "name": "Dasha",
+      "avatar": "",
+      "id": 4
+    },
+    {
+      "email": "tishev56667@bk.ru",
+      "password": "$2a$10$yIz4xnTjdKzZb70oZGob0uF9yw9.1pcsCTkyIuoDBcOU4i6qSHDhW",
+      "name": "alex",
+      "avatar": "",
+      "id": 5
+    },
+    {
+      "email": "tishev@bk.ru",
+      "password": "$2a$10$29fCcHxvc7QuCW7Sz2SBcuQk4T8Ax9kCIKZPZ25aUkHFhSzvJ2rCy",
+      "name": "Dasha Tisheva",
+      "avatar": "",
+      "id": 6
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

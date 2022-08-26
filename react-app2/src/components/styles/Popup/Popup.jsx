@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import axios from "axios";
+import axios from "../../../axios";
 
-const Popup = ({ popup, setPopup }) => {
+const Popup = ({ popup, setPopup, user, setUser }) => {
   const [status, setStatus] = useState("signIn");
 
   const popupCloseFunc = (e) => {
@@ -11,16 +11,31 @@ const Popup = ({ popup, setPopup }) => {
     }
   };
 
-  const signInHandler = (e) => {};
+  const signInHandler = (e) => {
+    axios
+      .post("/login", {
+        email: e.target[0].value,
+        password: e.target[1].value,
+      })
+      .then(({ data }) => {
+        e.target[0].value = "";
+        e.target[1].value = "";
+        setPopup(false);
+        localStorage.setItem("user", JSON.stringify(data.user));
+      })
+      .catch((err) => alert(err));
+  };
   const signUnHandler = (e) => {
     axios
       .post("/signup", {
         email: e.target[0].value,
         name: e.target[1].value,
         password: e.target[2].value,
+        avatar: "",
       })
       .then((res) => {
-        console.log(res.data);
+        setUser(res.data.user);
+        localStorage.setItem("user", JSON.stringify(res.data.user));
         setPopup(false);
         e.target[0].value = "";
         e.target[1].value = "";

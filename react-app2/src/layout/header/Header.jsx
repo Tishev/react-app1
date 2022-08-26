@@ -3,8 +3,12 @@ import logo from "../../assets/img/logo.svg";
 import logoLocation from "../../assets/img/location.svg";
 import { Link } from "react-router-dom";
 import Popup from "../../components/styles/Popup/Popup";
-const Header = () => {
+const Header = ({ user, setUser }) => {
   const [popup, setPopup] = useState(false);
+  const logOutUser = () => {
+    localStorage.removeItem("user");
+    setUser({});
+  };
   return (
     <header>
       <div className="container">
@@ -16,9 +20,25 @@ const Header = () => {
           </div>
           <div className="nav__navigation">
             <ul className="nav__navigation-ul">
-              <li onClick={() => setPopup(true)} className="nav__navigation-li">
-                ЛИЧНЫЙ КАБИНЕТ
-              </li>
+              {user.email ? (
+                <div className="nav__navigation-person">
+                  <p className="nav__navigation-p">{user.name}</p>
+                  <button
+                    onClick={() => logOutUser()}
+                    className="nav__navigation-btn"
+                    type={"button"}
+                  >
+                    Выйти
+                  </button>
+                </div>
+              ) : (
+                <li
+                  onClick={() => setPopup(true)}
+                  className="nav__navigation-li"
+                >
+                  ЛИЧНЫЙ КАБИНЕТ
+                </li>
+              )}
 
               <li className="nav__navigation-li">О НАС</li>
               <li className="nav__navigation-li">НОВОСТИ И АКЦИИ</li>
@@ -32,7 +52,14 @@ const Header = () => {
           </div>
         </div>
       </div>
-      {popup && <Popup setPopup={setPopup} popup={popup} />}
+      {popup && (
+        <Popup
+          user={user}
+          setUser={setUser}
+          setPopup={setPopup}
+          popup={popup}
+        />
+      )}
     </header>
   );
 };
